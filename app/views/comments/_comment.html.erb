@@ -1,0 +1,9 @@
+<% if comment.id %>
+<div>
+  <%= comment.body %>
+  <div>
+    <%= button_to "Edit", edit_post_comment_path(@post, comment), method: :get %>
+    <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, data: {confirm: "Are you sure?"} %>
+  </div>
+</div>
+<% end %>
