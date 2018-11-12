@@ -1,2 +1,19 @@
 <!-- View for creating a new `Post` -->
 <!-- See http://guides.rubyonrails.org/form_helpers.html#dealing-with-basic-forms for more information -->
+
+<h1>Create a new post</h1>
+
+<%= form_for @post do |p| %>
+  <p>
+    <%= p.label :title %> <br>
+    <%= p.text_field :title %>
+  </p>
+  <p>
+    <%= p.label :body %> <br>
+    <%= p.text_area :body %>
+  </p>
+  <p>
+    <%= p.submit %>
+  </p>
+
+<% end %>
