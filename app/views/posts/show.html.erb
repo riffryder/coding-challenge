@@ -12,10 +12,12 @@
     <%= button_to 'Delete Post', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
   <div>
+  <!-- partial for new comment -->
     <h3>Comments</h3>
     <%= render 'comments/new' %>
   </div>
   <div>
+  <!-- partial for indiviudal post commments -->
     <%= render @post.comments %>
   </div>
 </div>
