@@ -1,7 +1,18 @@
 <!-- View for showing all `Post` -->
-<h1>Blog Posts</h1>
+<div>
 
-<% @posts.each do |post| %>
-  <h3><%= post.title %></h3>
-  <p><%= post.body %></p>
-<% end %>
+  <h1>Blog Posts</h1>
+  <div>
+    <%= form_tag(posts_path, method: :get) do %>
+      <%= text_field_tag :search, params[:search]%>
+      <%= submit_tag 'Search'%>
+    <% end %>
+  </div>
+
+  <% @posts.each do |post| %>
+    <h3><%= post.title %></h3>
+    <p><%= post.body.truncate(400) %></p>
+    <p><%= link_to "comments (#{post.comments.count})", post_path(post) %></p>
+  <% end %>
+
+</div>
