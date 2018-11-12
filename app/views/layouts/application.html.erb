@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CodeingChallenge</title>
+    <title>Riff Raff's Blog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,9 +10,9 @@
 
   <body>
     <div>
-      <h1>CareerPlug</h1>
-      <%= button_to '+ New Post', new_post_path, method: :get %>
-    <div>
+      <h1><%= link_to "Riff Raff's Blog", root_path %></h1>
+      <%= button_to '+ New Post', new_post_path, method: :get  %>
+    </div>
     <%= yield %>
   </body>
 </html>
