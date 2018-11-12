@@ -1,0 +1,12 @@
+<div>
+  <h3>Edit Comment</h3>
+  <%= form_with(model: [@post, @comment]) do |c| %>
+    <p>
+      <%= c.text_area :body %>
+    </p>
+
+    <p>
+      <%= c.submit %>
+    </p>
+  <% end %>
+</div>
